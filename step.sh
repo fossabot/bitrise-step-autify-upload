@@ -8,15 +8,15 @@ readonly WORKIND_DIR="./"
 readonly ZIP_NAME="upload.zip"
 
 info() {
-  printf "$(tput setaf 7)- %s$(tput sgr0)\n" "$@"
+  printf "$(tput setaf 7) %s$(tput sgr0)\n" "$@"
 }
 
 success() {
-  printf "$(tput setaf 64)✓ %s$(tput sgr0)\n" "$@"
+  printf "$(tput setaf 64) %s$(tput sgr0)\n" "$@"
 }
 
 error() {
-  printf "$(tput setaf 1)x %s$(tput sgr0)\n" "$@"
+  printf "$(tput setaf 1) %s$(tput sgr0)\n" "$@"
 }
 
 create_app_zip() {
