@@ -2,6 +2,7 @@
 #
 # Upload to Autify
 set -e
+TERM=xterm
 
 readonly API_BASE_ADDRESS="https://mobile-app.autify.com/api/v1"
 readonly WORKIND_DIR="./"
