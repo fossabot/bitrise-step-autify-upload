@@ -2,22 +2,21 @@
 #
 # Upload to Autify
 set -e
-TERM=xterm
 
 readonly API_BASE_ADDRESS="https://mobile-app.autify.com/api/v1"
 readonly WORKIND_DIR="./"
 readonly ZIP_NAME="upload.zip"
 
 info() {
-  printf "$(tput setaf 7) %s$(tput sgr0)\n" "$@"
+  echo -e "$1"
 }
 
 success() {
-  printf "$(tput setaf 64) %s$(tput sgr0)\n" "$@"
+  echo -e "\033[00;32m $1 \033[0m"
 }
 
 error() {
-  printf "$(tput setaf 1) %s$(tput sgr0)\n" "$@"
+  echo -e "\033[00;31m $1 \033[0m"
 }
 
 create_app_zip() {
