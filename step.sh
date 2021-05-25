@@ -24,6 +24,8 @@ create_app_zip() {
 
   APP_ZIP_PATH="./${ZIP_NAME}"
   APP_NAME=$(basename "${app_dir_path}")
+
+  info "create zip file"
   zip -r "${APP_ZIP_PATH}" "${APP_NAME}"
 }
 
