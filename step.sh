@@ -30,7 +30,7 @@ create_app_zip() {
 main() {
   create_app_zip
 
-  TOKEN_HEADER="Authorization: Bearer ${upload_token}"
+  TOKEN_HEADER="Authorization: Bearer ${upload_token}2"
   API_UPLOAD_ADDRESS="${API_BASE_ADDRESS}/projects/${project_id}/builds"
   RESPONSE=$(curl -X POST "${API_UPLOAD_ADDRESS}" -H "accept: application/json" -H "${TOKEN_HEADER}" -H "Content-Type: multipart/form-data" -F "file=@${APP_ZIP_PATH};type=application/zip" -w '\n%{http_code}' -s)
 
@@ -49,6 +49,7 @@ main() {
   success "$BODY"
 }
 
+set -v
 # parameters
 info "parameters:"
 info "* upload_token: ${upload_token}"
